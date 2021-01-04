@@ -1,0 +1,60 @@
+body {
+    background-color: rgb(41, 40, 40);
+    color: rgb(221, 221, 221);
+    margin: 0;
+    text-align: -webkit-center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  @media screen and (max-width: 480px) {
+    .column {
+      width: 50%;
+    }
+  }
+
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: minmax(auto, 40%) 1fr; /* first column no more than 40%, ever (from 500px up) */
+    min-height: 100px;
+  }
+
+  @media (max-width: 800px) { /* screen width (or the .grid) needs to be at least 500px wide, in order to display the .sidebar, because min-width of 200px is exactly 40% of 500px, so display it when 500px and more, but hide it when less */
+    .grid {grid-template-columns: 1fr}
+    .grid .sidebar {display: none}
+  }
+
+  h1 {
+      font-size: xx-large;
+      text-align: center;
+  }
+
+  p {
+      text-align: justify;
+  }
+
+  a {
+    color: darkgoldenrod
+  }
+
+  span.sep {
+      margin: 0px 8px;
+      color: gray
+  }
+
+  img {
+    display: inline;
+    margin: 0 auto;
+    width: auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+  }
